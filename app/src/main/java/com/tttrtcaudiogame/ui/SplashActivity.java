@@ -137,7 +137,6 @@ public class SplashActivity extends BaseActivity {
         mIsLoging = true;
         mTTTRtcEngineHelper.splashShowWaittingDialog();
         new Thread(() -> {
-            mTTTEngine.enableAudio();
             // 设置频道类型
             int results = mTTTEngine.setChannelProfile(Constants.CHANNEL_PROFILE_GAME_FREE_MODE);
             MyLog.d("setChannelProfile result : " + results);
