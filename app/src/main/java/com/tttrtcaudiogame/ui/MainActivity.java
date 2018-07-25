@@ -388,38 +388,38 @@ public class MainActivity extends BaseActivity {
                     int errorType = (int) msg.obj;
                     if (errorType == Constants.ERROR_KICK_BY_HOST) {
                         mIsExitRoom = true;
-                        message = "被主播踢出";
+                        message = getResources().getString(R.string.ERROR_KICK_BY_HOST);
                     } else if (errorType == Constants.ERROR_KICK_BY_PUSHRTMPFAILED) {
                         mIsExitRoom = true;
-                        message = "rtmp推流失败";
+                        message = getResources().getString(R.string.ERROR_KICK_BY_PUSHRTMPFAILED);
                     } else if (errorType == Constants.ERROR_KICK_BY_SERVEROVERLOAD) {
                         mIsExitRoom = true;
-                        message = "服务器过载";
+                        message = getResources().getString(R.string.ERROR_KICK_BY_SERVEROVERLOAD);
                     } else if (errorType == Constants.ERROR_KICK_BY_MASTER_EXIT) {
                         mIsExitRoom = true;
-                        message = "主播已退出";
+                        message = getResources().getString(R.string.ERROR_KICK_BY_MASTER_EXIT);
                     } else if (errorType == Constants.ERROR_KICK_BY_RELOGIN) {
                         mIsExitRoom = true;
-                        message = "重复登录";
+                        message = getResources().getString(R.string.ERROR_KICK_BY_RELOGIN);
                     } else if (errorType == Constants.ERROR_KICK_BY_NEWCHAIRENTER) {
                         mIsExitRoom = true;
-                        message = "其他人以主播身份进入";
+                        message = getResources().getString(R.string.ERROR_KICK_BY_NEWCHAIRENTER);
                     } else if (errorType == Constants.ERROR_KICK_BY_NOAUDIODATA) {
                         mIsExitRoom = true;
-                        message = "长时间没有上行音频数据";
+                        message = getResources().getString(R.string.ERROR_KICK_BY_NOAUDIODATA);
                     } else if (errorType == Constants.ERROR_KICK_BY_NOVIDEODATA) {
                         mIsExitRoom = true;
-                        message = "长时间没有上行视频数据";
+                        message = getResources().getString(R.string.ERROR_KICK_BY_NOVIDEODATA);
                     } else if (errorType == DISCONNECT) {
                         if (!mIsExitRoom) {
-                            message = "网络连接断开，请检查网络";
+                            message = getResources().getString(R.string.DISCONNECT);
                         }
                     }
                     if (exit == null) {
-                        exit = new AlertDialog.Builder(MainActivity.this).setTitle("退出房间提示")//设置对话框标题
-                                .setMessage("用户 " + LocalConfig.mLoginUserID + " 退出原因: " + message)//设置显示的内容
+                        exit = new AlertDialog.Builder(MainActivity.this).setTitle(getResources().getString(R.string.exitroom_dialog_title))//设置对话框标题
+                                .setMessage(getResources().getString(R.string.exitroom_dialog_user) + LocalConfig.mLoginUserID + getResources().getString(R.string.exitroom_dialog_reason) + message)//设置显示的内容
                                 .setCancelable(false)
-                                .setPositiveButton("确定", new DialogInterface.OnClickListener() {//添加确定按钮
+                                .setPositiveButton(getResources().getString(R.string.exitroom_dialog_sure), new DialogInterface.OnClickListener() {//添加确定按钮
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {//确定按钮的响应事件
                                         exitRoom();
@@ -431,7 +431,7 @@ public class MainActivity extends BaseActivity {
                     boolean isSpeak = (boolean) msg.obj;
                     mTTTEngine.muteLocalAudioStream(!isSpeak);
                     if (isSpeak) {
-                        mSpeakingTV.setText("结束");
+                        mSpeakingTV.setText(getResources().getString(R.string.main_end));
                         mSpeakingTV.setBackgroundResource(R.drawable.mainly_btn_speaking_bg_press);
                         mIsSpeaking = true;
                     } else {
@@ -439,7 +439,7 @@ public class MainActivity extends BaseActivity {
                             mLocalUserViewObj.mSpeakImage.setVisibility(View.INVISIBLE);
                         }
 
-                        mSpeakingTV.setText("开始");
+                        mSpeakingTV.setText(getResources().getString(R.string.main_start));
                         mSpeakingTV.setBackgroundResource(R.drawable.mainly_btn_speaking_bg);
                         mIsSpeaking = false;
                     }

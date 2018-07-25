@@ -45,7 +45,8 @@ dependencies {
     })
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     testImplementation 'junit:junit:4.12'
-    implementation(name: 'TTT_VIDEOSDK(0525)', ext: 'aar')
+    implementation files('libs/bugly_crash_release.jar')
+    api(name: 'TTT_VIDEOSDK(0724)', ext: 'aar')
     implementation 'com.yanzhenjie:permission:2.0.0-rc1'
     implementation 'com.jaeger.statusbarutil:library:1.4.0'
 }

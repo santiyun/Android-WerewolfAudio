@@ -2,6 +2,7 @@ package com.tttrtcaudiogame;
 
 import android.app.Application;
 
+import com.tencent.bugly.crashreport.CrashReport;
 import com.tttrtcaudiogame.callback.MyTTTRtcEngineEventHandler;
 import com.wushuangtech.wstechapi.TTTRtcEngineForGamming;
 
@@ -20,5 +21,7 @@ public class MainApplication extends Application {
 //        //2.设置SDK的回调接收类
         mMyTTTRtcEngineEventHandler = new MyTTTRtcEngineEventHandler(getApplicationContext());
         mTTTEngine.setTTTRtcEngineForGammingEventHandler(mMyTTTRtcEngineEventHandler);
+
+        CrashReport.initCrashReport(getApplicationContext(), "7b29a7f16b", true);
     }
 }

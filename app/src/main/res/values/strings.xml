@@ -1,4 +1,23 @@
 <resources>
 	<string name="app_name">狼人杀音频互动</string>
 	<string name="version_info">http://www.3ttech.cn version %1$s</string>
+	<string name="welcome_enter">进入</string>
+	<string name="welcome_roomid">房间ID：</string>
+	<string name="welcome_input_roomid">请输入房间ID</string>
+	<string name="main_start">开始</string>
+	<string name="main_end">结束</string>
+	<string name="exitroom_dialog_title">退出房间提示</string>
+	<string name="exitroom_dialog_reason">" 退出原因: "</string>
+	<string name="exitroom_dialog_user">"用户 "</string>
+	<string name="exitroom_dialog_sure">确定</string>
+	<string name="ERROR_KICK_BY_HOST">被主播踢出</string>
+	<string name="ERROR_KICK_BY_PUSHRTMPFAILED">rtmp推流失败</string>
+	<string name="ERROR_KICK_BY_SERVEROVERLOAD">服务器过载</string>
+	<string name="ERROR_KICK_BY_MASTER_EXIT">主播已退出</string>
+	<string name="ERROR_KICK_BY_RELOGIN">重复登录</string>
+	<string name="ERROR_KICK_BY_NEWCHAIRENTER">其他人以主播身份进入</string>
+	<string name="ERROR_KICK_BY_NOAUDIODATA">长时间没有上行音频数据</string>
+	<string name="ERROR_KICK_BY_NOVIDEODATA">长时间没有上行视频数据</string>
+	<string name="DISCONNECT">网络连接断开，请检查网络</string>
+	<string name="game_zone">游戏区</string>
 </resources>

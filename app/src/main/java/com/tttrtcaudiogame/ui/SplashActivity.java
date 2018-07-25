@@ -172,8 +172,6 @@ public class SplashActivity extends BaseActivity {
                         runOnUiThread(() -> {
                             if (errorType == Constants.ERROR_ENTER_ROOM_TIMEOUT) {
                                 Toast.makeText(mContext, "超时，10秒未收到服务器返回结果", Toast.LENGTH_SHORT).show();
-                            } else if (errorType == Constants.ERROR_ENTER_ROOM_FAILED) {
-                                Toast.makeText(mContext, "无法连接服务器", Toast.LENGTH_SHORT).show();
                             } else if (errorType == Constants.ERROR_ENTER_ROOM_VERIFY_FAILED) {
                                 Toast.makeText(mContext, "验证码错误", Toast.LENGTH_SHORT).show();
                             } else if (errorType == Constants.ERROR_ENTER_ROOM_BAD_VERSION) {
